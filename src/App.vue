@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <!-- header -->
     <div class="nav">
       <div class="brand"><img class="logo" src="./assets/logo1.png" /><span class="ldance-title">李若婷舞蹈工作室</span></div>
       <router-link tag="div" class="nav-item" to="/Homepage">
@@ -15,7 +16,9 @@
         <span class="nav-link">联系我们</span>
       </router-link>
     </div>
+    <!-- main -->
     <router-view/>
+    <!-- footer -->
   </div>
 </template>
 
@@ -55,7 +58,6 @@ html body {
   color: #273575;
   font-weight: bold;
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: center;
   height: 3rem;
