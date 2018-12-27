@@ -1,10 +1,10 @@
 <template>
   <div class="homepage">
     <template>
-      <el-carousel :interval="3000" indicator-position="outside" height="400px">
-        <el-carousel-item v-for="item in banners" :key="item.id">
-          <h3>{{ item }}</h3>
-          <!-- <div class="banner-item"><img ref="imgHeight" :src="item.banner" alt="李若婷舞蹈品牌" class="banner-img"></div> -->
+      <el-carousel :interval="3000" indicator-position="outside" :height="bannerHeight">
+        <el-carousel-item class="banner-item" v-for="item in banners" :key="item.id">
+          <!-- <h3>{{ item }}</h3> -->
+          <img ref="imgHeight" :src="item.banner" alt="李若婷舞蹈品牌" class="banner-image">
         </el-carousel-item>
       </el-carousel>
     </template>
@@ -15,16 +15,24 @@ export default {
   data () {
     return {
       banners: [
-        {id: 0, banner: require('../../assets/images/banner1.jpg')},
-        {id: 1, banner: require('../../assets/images/banner2.jpg')},
-        {id: 2, banner: require('../../assets/images/banner3.jpg')},
-        {id: 3, banner: require('../../assets/images/banner4.jpg')}
+        {id: 0, banner: require('../../assets/images/banner1.jpg')}
+        // {id: 1, banner: require('../../assets/images/banner2.jpg')},
+        // {id: 2, banner: require('../../assets/images/banner3.jpg')},
+        // {id: 3, banner: require('../../assets/images/banner4.jpg')}
       ],
       imgHeight: '400px'
     }
   },
+  computed: {
+    bannerHeight () {
+      let watchHeight = this.$ref.imgHeight['0'].offsetHeight
+      console.log(watchHeight)
+      return '600px'
+    }
+  },
   mounted () {
-    // console.log(this.$refs.imgHeight['0'].height)
+    console.log(this.$refs)
+    console.log(this.$refs.imgHeight['0'].offsetHeight)
   }
   // methods: {
   //   setSize: function () {
@@ -62,13 +70,8 @@ export default {
   .el-carousel__item:nth-child(2n+1) {
     background-color: #d3dce6;
   }
-  .banner-item{
-    width: 100%;
-    height: inherit;
-    min-height: 360px;
-    min-width: 1400px;
+  .banner-image {
+    max-width: 100%;
+    height: auto;
   }
-  /* .banner-img {
-    height: 600px;
-  } */
 </style>
