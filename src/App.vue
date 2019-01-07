@@ -24,15 +24,7 @@
 
 <script>
 export default {
-  name: 'App',
-  data () {
-    return {
-    }
-  },
-  methods: {
-  },
-  components: {
-  }
+  name: 'App'
 }
 </script>
 
@@ -47,13 +39,6 @@ html body {
   padding: 0;
   margin: 0;
 }
-/* #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-} */
 .nav {
   color: #273575;
   font-weight: bold;
@@ -98,5 +83,23 @@ html body {
   margin-left: 4px;
   position: fixed;
   top: 0px;
+}
+/* for imac */
+@media only screen and (min-width: 1160px) {
+
+}
+/* for macbook and ipad pro */
+@media only screen and (min-width: 800px) and (max-width: 1159px) {
+
+}
+/* for ipad */
+@media only screen and (min-width: 425px) and (max-width: 799px) {
+
+}
+/* for phone */
+@media only screen and (max-width: 424px) {
+  .ldance-title {
+    display: none;
+  }
 }
 </style>
