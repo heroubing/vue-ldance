@@ -7,6 +7,7 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import fastclick from 'fastclick'
+import './assets/iconfont/iconfont.css'
 
 Vue.use(ElementUI)
 Vue.config.productionTip = false

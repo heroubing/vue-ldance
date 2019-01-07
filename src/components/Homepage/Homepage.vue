@@ -3,7 +3,6 @@
     <template>
       <el-carousel :interval="3000" indicator-position="outside" :height="height">
         <el-carousel-item class="banner-item" v-for="item in banners" :key="item.id">
-          <!-- <h3>{{ item }}</h3> -->
           <img ref="imgHeight" :src="item.banner" alt="李若婷舞蹈品牌" class="banner-image">
         </el-carousel-item>
       </el-carousel>
